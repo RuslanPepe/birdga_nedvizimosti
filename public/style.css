@@ -1,0 +1,80 @@
+html{
+  height: 100%;
+}
+body{
+  scroll-behavior: smooth;
+  height: 100%;
+}
+.full-screen{
+  height: 100%;
+  display: grid;
+}
+.header{
+  margin-bottom: 20px;
+  user-select: none;
+  display: block;
+}
+.icon{
+  display: grid;
+  justify-items: center;
+}
+.imgIcon{
+  cursor: pointer;
+  height: 64px;
+}
+.button-header{
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  margin-left: 19px;
+}
+.footer{
+  background-color: #499ABF;
+  height: 80px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+.footer-logo{
+  width: 64px;
+}
+.background-select{
+  background-image: url("{{asset('image/back-select.png')}}");
+}
+.header-group{
+  display: flex;
+}
+.header-group-btn{
+  height: 36px;
+  width: 36px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: white;
+  border: .1px solid rgba(0, 0, 0, .03);
+  box-shadow: 0 0 36px 4px rgba(0, 0, 0, 3%);
+  margin: 0 0 0 70px;
+  font-weight: 600;
+}
+.header-group-btn-text{
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 0 10px;
+  align-content: center;
+}
+.header-group-img{
+  margin: 0 0 0 15px;
+  width: 23px;
+  height: 26px;
+  align-self: center;
+  cursor: pointer;
+}
+.header-group-add{
+  margin: -20px 0 0 0;
+}
+.header-group-plus-btn{
+  text-decoration: none;
+  color: black;
+}
+.footer-mn{
+  align-content: end;
+}

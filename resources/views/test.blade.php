@@ -2,16 +2,29 @@
 @section('title', 'test')
 
 @section('style')
-  <style>
-
-  </style>
+<style>
+  .model{
+    font-size: 40px;
+    margin: 0 0 0 300px;
+  }
+  .type{
+    margin: 0 0 0 300px;
+    font-size: 40px;
+  }
+  .model:hover + .type{
+    color: pink;
+  }
+  .aHref:hover + .model{
+    color: cyan;
+  }
+  .btn:hover + .model{
+    background-color: brown;
+  }
+</style>
 @endsection
 
 @section('content')
-  <input type="text" id="search" placeholder="Введите адрес или ЖК">
-  <div id="map"></div>
-@endsection
-
-@section('script')
-  <script src="https://suggest-maps.yandex.ru/v1/suggest?apikey=e7692a53-8e97-4a20-ae6f-ec1e70062c30&text=бурдж"></script>
+  <button class="btn">Lorem ipsum dolor.</button>
+  <div class="model">model</div>
+  <div class="type">type</div>
 @endsection

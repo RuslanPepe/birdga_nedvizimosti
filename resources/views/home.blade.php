@@ -3,15 +3,13 @@
 
 @section('style')
   <style>
-    .search-select-menu{}
     .btn-search-select{
       position: absolute;
       margin-top: 250px;
-
     }
     .btn-select{
       vertical-align: middle;
-      transition: background-color .32s;
+      transition: background-color .32s, color .5s;
       font-weight: bold;
       margin: 0;
       border-radius: 0;
@@ -37,12 +35,8 @@
       background-image: url({{asset('/image/back-select.png')}});
       background-repeat: no-repeat;
       position: absolute;
-      z-index: -1;
       width: 100%;
       height: 720px;
-    }
-    .content{
-      position: relative;
     }
     .btn-font-size{
       font-size: 0;
@@ -71,22 +65,22 @@
     }
     .btn-search{
       background: #009BE9;
-      padding: 15px 35px;
+      padding: 10px 20px;
       border: none;
       font-weight: 600;
       color: white;
       border-radius: 5px;
     }
     .btn-search-map{
-      padding: 15px 30px;
+      padding: 10px 20px;
       border: none;
       font-weight: 600;
       border-radius: 5px;
       margin-right: 20px;
     }
     .btn-search-mn{
-      font-size: 24px;
-      margin-left: 1374px;
+      font-size: 20px;
+      margin-left: 1466px;
       margin-top: 410px;
       display: inline-block;
     }
@@ -157,153 +151,135 @@
 @endsection
 
 @section('content')
-
-  <div class="content">
-    <div class="background-select" style="position: sticky;">
-      <div class="container-fluid search-select-menu">
-        <div class="map-city">
-          <button class="city-map-select" >
-            <img src="{{asset('image/map-picker.png')}}" style="width: 15px;margin: -3px 3px 0 0;opacity: 85%;">
-            <p style="display: inline-block;margin: 0 0 0 0 ;opacity: 85%;">Москва</p>
-          </button>
-        </div>
-        <div class="row">
-          <div class="col-sm-1" style="margin-left: -60px"></div>
-          <div class="col-sm-10">
-            <div class="btn-font-size">
-              <div class="btn-search-select">
-                <button type="button" class="btn-select " style="border-radius: 5px 0 0 0">Купить</button>
-                <button type="button" class="btn-select ">Снять</button>
-                <button type="button" class="btn-select ">Посуточно</button>
-                <button type="button" class="btn-select ">Построить</button>
-                <button type="button" class="btn-select ">Ипотека</button>
-                <button type="button" class="btn-select ">Подобрать риелтора</button>
-                <button type="button" class="btn-select " style="border-radius: 0 15px 0 0">Новостройки</button>
-              </div>
+  <div class="background-select" style="position: sticky;">
+    <div class="container-fluid search-select-menu">
+      <div class="map-city">
+        <button class="city-map-select" >
+          <img src="{{asset('image/map-picker.png')}}" style="width: 15px;margin: -3px 3px 0 0;opacity: 85%;">
+          <p style="display: inline-block;margin: 0 0 0 0 ;opacity: 85%;">Москва</p>
+        </button>
+      </div>
+      <div class="row">
+        <div class="col-sm-1" style="margin-left: -60px"></div>
+        <div class="col-sm-10">
+          <div class="btn-font-size">
+            <div class="btn-search-select">
+              <button type="button" class="btn-select " style="border-radius: 5px 0 0 0">Купить</button>
+              <button type="button" class="btn-select ">Снять</button>
+              <button type="button" class="btn-select ">Посуточно</button>
+              <button type="button" class="btn-select ">Построить</button>
+              <button type="button" class="btn-select ">Ипотека</button>
+              <button type="button" class="btn-select ">Подобрать риелтора</button>
+              <button type="button" class="btn-select " style="border-radius: 0 15px 0 0">Новостройки</button>
             </div>
-            <div class="search-select">
-              <div class="search-select-back-white-box">
-                <div class="select-type-room">
-                  <div class="group" >
-                    <p class="select-type-room-group-text">Квартиру в новостройке</p>
-                    <img src="{{asset('image/bottom.png')}}" alt="" style="position: absolute;height: 24px;width: 24px;margin-left: 330px; opacity: 48%;margin-top: -25px;">
-                    <img src="{{asset('image/line.png')}}" alt="" style="margin-top: -57px; margin-left:385px;opacity: 20%;width: 2px;height: 90px">
-                  </div>
-                  <div class="group" >
-                    <p class="select-type-room-group-text">1,2 комн.</p>
-                    <img src="{{asset('image/bottom.png')}}" alt="" style="position: absolute;height: 24px;width: 24px;margin-left: 240px; opacity: 48%;margin-top: -25px">
-                    <img src="{{asset('image/line.png')}}" alt="" style="margin-top: -57px; margin-left:295px;opacity: 20%;width: 2px;height: 90px">
-                  </div>
-                  <div class="group" >
-                    <p class="select-type-room-group-text" style="font-weight: 500;opacity: 80%">Цена</p>
-                    <img src="{{asset('image/bottom.png')}}" alt="" style="position: absolute;height: 24px;width: 24px;margin-left: 240px; opacity: 48%;margin-top: -25px">
-                    <img src="{{asset('image/line.png')}}" alt="" style="margin-top: -57px; margin-left:295px;opacity: 20%;width: 2px;height: 90px">
-                  </div>
-                  <div class="group" >
-                    <input class="select-locate" placeholder="Город, адрес, метро, район, ж/д, шоссе или ЖК">
-                    {{--                    <p style="font-size: 18px; font-weight: bold;margin-left: 40px; margin-top: -45px;position: absolute;opacity: 60%">Город, адрес, метро, район, ж/д, шоссе или ЖК</p>--}}
-                  </div>
+          </div>
+          <div class="search-select">
+            <div class="search-select-back-white-box">
+              <div class="select-type-room">
+                <div class="group" >
+                  <p class="select-type-room-group-text">Квартиру в новостройке</p>
+                  <img src="{{asset('image/bottom.png')}}" alt="" style="position: absolute;height: 24px;width: 24px;margin-left: 330px; opacity: 48%;margin-top: -25px;">
+                  <img src="{{asset('image/line.png')}}" alt="" style="margin-top: -57px; margin-left:385px;opacity: 20%;width: 2px;height: 90px">
+                </div>
+                <div class="group" >
+                  <p class="select-type-room-group-text">1,2 комн.</p>
+                  <img src="{{asset('image/bottom.png')}}" alt="" style="position: absolute;height: 24px;width: 24px;margin-left: 240px; opacity: 48%;margin-top: -25px">
+                  <img src="{{asset('image/line.png')}}" alt="" style="margin-top: -57px; margin-left:295px;opacity: 20%;width: 2px;height: 90px">
+                </div>
+                <div class="group" >
+                  <p class="select-type-room-group-text" style="font-weight: 500;opacity: 80%">Цена</p>
+                  <img src="{{asset('image/bottom.png')}}" alt="" style="position: absolute;height: 24px;width: 24px;margin-left: 240px; opacity: 48%;margin-top: -25px">
+                  <img src="{{asset('image/line.png')}}" alt="" style="margin-top: -57px; margin-left:295px;opacity: 20%;width: 2px;height: 90px">
+                </div>
+                <div class="group" >
+                  <input class="select-locate" placeholder="Город, адрес, метро, район, ж/д, шоссе или ЖК">
+                  {{--                    <p style="font-size: 18px; font-weight: bold;margin-left: 40px; margin-top: -45px;position: absolute;opacity: 60%">Город, адрес, метро, район, ж/д, шоссе или ЖК</p>--}}
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="btn-search-mn">
-          <button class="btn-search-map">Найти на карте</button>
-          <button class="btn-search">Найти</button>
-        </div>
+      </div>
+      <div class="btn-search-mn">
+        <button class="btn-search-map">Найти на карте</button>
+        <button class="btn-search">Найти</button>
       </div>
     </div>
-    <div class="container-fluid room-list-main">
-      <div class="text-center room-list-text">
-        <p>В топе!</p>
+  </div>
+  <div class="container-fluid room-list-main">
+    <div class="text-center room-list-text">
+      <p>В топе!</p>
+    </div>
+    <div class="row justify-content-center room-list">
+      <div class="room-order">
+        <img src="{{asset("image/room-overlay.png")}}" style="margin: -1px" alt="not found... 404" class="img-overlay">
+        <p class="room-price">37 800 000 ₽</p>
+        <div class="room-metro">
+          <div class="group-metro group-metro-1">
+            <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
+            <p class="room-metro-text">Арбатская</p>
+          </div>
+          <div class="group-metro group-metro-2">
+            <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
+            <p class="room-metro-text">Смоленская</p>
+          </div>
+          <div class="group-metro group-metro-3">
+            <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
+            <p class="room-metro-text">Алекс. сад</p>
+          </div>
+        </div>
+        <div class="room-characters">
+          <p class="room-characters-text">2-комн. кв.</p>
+          <p class="room-characters-text">72 м²</p>
+          <p class="room-characters-text">28/65 этаж</p>
+        </div>
       </div>
-      <div class="row justify-content-center room-list">
-        <div class="room-order">
-          <img src="{{asset("image/room-overlay.png")}}" style="margin: -1px" alt="not found... 404" class="img-overlay">
-          <p class="room-price">37 800 000 ₽</p>
-          <div class="room-metro">
-            <div class="group-metro group-metro-1">
-              <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
-              <p class="room-metro-text">Арбатская</p>
-            </div>
-            <div class="group-metro group-metro-2">
-              <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
-              <p class="room-metro-text">Смоленская</p>
-            </div>
-            <div class="group-metro group-metro-3">
-              <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
-              <p class="room-metro-text">Алекс. сад</p>
-            </div>
+      <div class="room-order" id="3">
+        <img src="{{asset("image/room-overlay.png")}}" style="margin: -1px" alt="not found... 404" class="img-overlay">
+        <p class="room-price">37 800 000 ₽</p>
+        <div class="room-metro">
+          <div class="group-metro group-metro-1">
+            <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
+            <p class="room-metro-text">Арбатская</p>
           </div>
-          <div class="room-characters">
-            <p class="room-characters-text">2-комн. кв.</p>
-            <p class="room-characters-text">72 м²</p>
-            <p class="room-characters-text">28/65 этаж</p>
+          <div class="group-metro group-metro-2">
+            <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
+            <p class="room-metro-text">Смоленская</p>
+          </div>
+          <div class="group-metro group-metro-3">
+            <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
+            <p class="room-metro-text">Алекс. сад</p>
           </div>
         </div>
-        <div class="room-order" id="3">
-          <img src="{{asset("image/room-overlay.png")}}" style="margin: -1px" alt="not found... 404" class="img-overlay">
-          <p class="room-price">37 800 000 ₽</p>
-          <div class="room-metro">
-            <div class="group-metro group-metro-1">
-              <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
-              <p class="room-metro-text">Арбатская</p>
-            </div>
-            <div class="group-metro group-metro-2">
-              <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
-              <p class="room-metro-text">Смоленская</p>
-            </div>
-            <div class="group-metro group-metro-3">
-              <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
-              <p class="room-metro-text">Алекс. сад</p>
-            </div>
+        <div class="room-characters">
+          <p class="room-characters-text">2-комн. кв.</p>
+          <p class="room-characters-text">72 м²</p>
+          <p class="room-characters-text">28/65 этаж</p>
+        </div>
+      </div>
+      <div class="room-order">
+        <img src="{{asset("image/room-overlay.png")}}" style="margin: -1px" alt="not found... 404" class="img-overlay">
+        <p class="room-price">37 800 000 ₽</p>
+        <div class="room-metro">
+          <div class="group-metro group-metro-1">
+            <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
+            <p class="room-metro-text">Арбатская</p>
           </div>
-          <div class="room-characters">
-            <p class="room-characters-text">2-комн. кв.</p>
-            <p class="room-characters-text">72 м²</p>
-            <p class="room-characters-text">28/65 этаж</p>
+          <div class="group-metro group-metro-2">
+            <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
+            <p class="room-metro-text">Смоленская</p>
+          </div>
+          <div class="group-metro group-metro-3">
+            <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
+            <p class="room-metro-text">Алекс. сад</p>
           </div>
         </div>
-        <div class="room-order">
-          <img src="{{asset("image/room-overlay.png")}}" style="margin: -1px" alt="not found... 404" class="img-overlay">
-          <p class="room-price">37 800 000 ₽</p>
-          <div class="room-metro">
-            <div class="group-metro group-metro-1">
-              <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
-              <p class="room-metro-text">Арбатская</p>
-            </div>
-            <div class="group-metro group-metro-2">
-              <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
-              <p class="room-metro-text">Смоленская</p>
-            </div>
-            <div class="group-metro group-metro-3">
-              <img src="{{asset('image/metro-logo.png')}}" alt="" class="room-metro-icon">
-              <p class="room-metro-text">Алекс. сад</p>
-            </div>
-          </div>
-          <div class="room-characters">
-            <p class="room-characters-text">2-комн. кв.</p>
-            <p class="room-characters-text">72 м²</p>
-            <p class="room-characters-text">28/65 этаж</p>
-          </div>
+        <div class="room-characters">
+          <p class="room-characters-text">2-комн. кв.</p>
+          <p class="room-characters-text">72 м²</p>
+          <p class="room-characters-text">28/65 этаж</p>
         </div>
       </div>
     </div>
   </div>
-@endsection
-
-@section('script')
-  <script>
-   const redirect_room_order = document.getElementsByClassName('room-order')
-   const redir_RO = document.getElementById('3')
-
-
-   redir_RO.addEventListener('click', function () {
-     window.open('order-id');
-   })
-
-  </script>
-
-
 @endsection
