@@ -1,4 +1,5 @@
 <template>
+  <Header/>
   <div class="background-select" style="position: sticky;">
     <div class="container-fluid search-select-menu">
       <div class="map-city">
@@ -81,7 +82,7 @@
           <p class="room-characters-text">28/65 этаж</p>
         </div>
       </div>
-      <div class="room-order" @click="">
+      <div class="room-order" @click="orderRedirect('id')">
         <img src="/image/room-overlay.png" style="margin: -1px" alt="not found... 404" class="img-overlay">
         <p class="room-price">37 800 000 ₽</p>
         <div class="room-metro">
@@ -129,14 +130,19 @@
       </div>
     </div>
   </div>
+  <Footer/>
 </template>
 
 <script>
+import Header from "../Components/Header.vue";
+import Footer from "../Components/Footer.vue";
+
 export default {
   name: 'MyComponent',
+  components: {Footer, Header},
   methods: {
     orderRedirect(id){
-      window.open('order-'+id, '_blank')
+      window.open('order-'+id, '_self')
     },
   }
 };

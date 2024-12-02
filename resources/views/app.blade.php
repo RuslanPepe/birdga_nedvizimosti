@@ -12,11 +12,8 @@
   @yield('style')
 </head>
   <body class="font-sans antialiased">
-  @include('header')
-
   <div class="full-screen">
     @inertia
-    @include('footer')
   </div>
 
 @yield('script')
