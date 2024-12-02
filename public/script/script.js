@@ -1,30 +1,8 @@
 let favorite_list = document.getElementById('favorite')
 let room_order_id = document.getElementById('3')
-let btn_rental1 = document.getElementById('btn-rental-1')
-let type_rental1 = document.getElementById('type-rental-1')
-let btn_rental2 = document.getElementById('btn-rental-2')
-let type_rental2 = document.getElementById('type-rental-2')
 
 if (document.getElementById('3')){room_order_id.addEventListener('click', function () {window.open('order-id', '_blank')})}
 favorite_list.addEventListener('click' , function (){window.open('/favorite', '_blank')})
-
-
-// function changeStyle() {
-//   if (type_rental1.checked){
-//     btn_rental1.className = 'type-btn'
-//   }
-//   else {
-//     btn_rental1.className = 'type-btn-default'
-//   }
-//
-//   if (type_rental2.checked){
-//     btn_rental2.className = 'type-btn'
-//   }
-//   else {
-//     btn_rental2.className = 'type-btn-default'
-//   }
-//   console.log('Первый- '+type_rental1.checked+' Второй- '+type_rental2.checked)
-// }
 
 function clickStyle(num1,num2) {
   let btn_rental1 = document.getElementById('btn-rental-'+num1)

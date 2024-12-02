@@ -39,7 +39,7 @@ body{
   width: 64px;
 }
 .background-select{
-  background-image: url("{{asset('image/back-select.png')}}");
+  background-image: url('image/back-select.png');
 }
 .header-group{
   display: flex;
@@ -78,3 +78,7 @@ body{
 .footer-mn{
   align-content: end;
 }
+input:focus {
+  outline: none;
+}
+

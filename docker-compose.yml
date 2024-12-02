@@ -50,6 +50,14 @@ services:
         networks:
             - app-network
 
+    vuejs:
+        image: vuejs3:latest
+        restart: always
+        volumes:
+            - .:/laravel
+        networks:
+            - app-network
+
 networks:
     app-network:
         driver: bridge
