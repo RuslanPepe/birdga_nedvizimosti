@@ -13,6 +13,8 @@ class UserController
   }
 
   public function showVuejs(){
-    return Inertia::render('/order-id');
+    $data = ['type_room' => 'Новостройка'];
+    return Inertia::render('Order-id', ['data' => $data]);
   }
+
 }

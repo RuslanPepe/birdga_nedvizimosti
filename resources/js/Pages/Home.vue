@@ -27,18 +27,18 @@
               <div class="select-type-room">
                 <div class="group" >
                   <p class="select-type-room-group-text">Квартиру в новостройке</p>
-                  <img src="/image/bottom.png" alt="" style="position: absolute;height: 24px;width: 24px;margin-left: 330px; opacity: 48%;margin-top: -25px;">
-                  <img src="/image/line.png" alt="" style="margin-top: -57px; margin-left:385px;opacity: 20%;width: 2px;height: 90px">
+                  <img src="/image/bottom.png" alt="" style="position:absolute;height:24px;width:24px;margin-left: 50px;opacity:48%;margin-top: 35px;">
+                  <img src="/image/line.png" alt="" style="margin-left:110px;opacity: 20%;width: 2px;height: 90px">
                 </div>
                 <div class="group" >
                   <p class="select-type-room-group-text">1,2 комн.</p>
-                  <img src="/image/bottom.png" alt="" style="position: absolute;height: 24px;width: 24px;margin-left: 240px; opacity: 48%;margin-top: -25px">
-                  <img src="/image/line.png" alt="" style="margin-top: -57px; margin-left:295px;opacity: 20%;width: 2px;height: 90px">
+                  <img src="/image/bottom.png" alt="" style="position: absolute;height: 24px;width: 24px;margin-left: 60px; opacity: 48%;margin-top: 35px;">
+                  <img src="/image/line.png" alt="" style="margin-left:120px;opacity: 20%;width: 2px;height: 90px">
                 </div>
                 <div class="group" >
                   <p class="select-type-room-group-text" style="font-weight: 500;opacity: 80%">Цена</p>
-                  <img src="/image/bottom.png" alt="" style="position: absolute;height: 24px;width: 24px;margin-left: 240px; opacity: 48%;margin-top: -25px">
-                  <img src="/image/line.png" alt="" style="margin-top: -57px; margin-left:295px;opacity: 20%;width: 2px;height: 90px">
+                  <img src="/image/bottom.png" alt="" style="position: absolute;height: 24px;width: 24px;margin-left: 60px; opacity: 48%;margin-top: 35px;">
+                  <img src="/image/line.png" alt="" style="margin-left:115px;opacity: 20%;width: 2px;height: 90px">
                 </div>
                 <div class="group" >
                   <input class="select-locate" placeholder="Город, адрес, метро, район, ж/д, шоссе или ЖК">
@@ -50,7 +50,7 @@
       </div>
       <div class="btn-search-mn">
         <button class="btn-search-map">Найти на карте</button>
-        <button class="btn-search">Найти</button>
+        <button class="btn-search" type="submit">Найти</button>
       </div>
     </div>
   </div>
@@ -190,15 +190,12 @@ export default {
 }
 .select-locate {
   font-size: 18px;
-  margin-left: 20px;
-  margin-top: -55px;
+  margin-left: 25px;
+  margin-top: -30px;
   height: 45px;
   position: absolute;
-  width: 650px;
+  width: 840px;
   border: none;
-}
-.select-locate{
-  outline: none !important;
 }
 .select-locate::-webkit-input-placeholder{
   font-weight: bold;
@@ -229,7 +226,7 @@ export default {
 }
 .btn-search-mn{
   font-size: 20px;
-  margin-left: 1466px;
+  margin-left: 1472px;
   margin-top: 410px;
   display: inline-block;
 }
@@ -271,13 +268,13 @@ export default {
   display: inline-block;
 }
 .room-characters{
-  margin: 0 0 0 23px;
+  margin: 5px 0 0 23px;
 }
 .room-characters-text{
   display: inline-block;
   font-weight: 500;
   font-size: 18px;
-  margin: 0 30px 0 2px;
+  margin: 0 55px 0 2px;
 }
 .room-metro{
   position: absolute;
